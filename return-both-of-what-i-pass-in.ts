@@ -1,4 +1,4 @@
-function returnBothOfWhatIPassIn<T extends string, U>(a: T, b: U) {
+export function returnBothOfWhatIPassIn<T extends string, U>(a: T, b: U) {
   return {
     a,
     b,

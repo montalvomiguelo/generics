@@ -1,4 +1,4 @@
-function returnWhatIPassIn<T extends string>(arg: T): T {
+export function returnWhatIPassIn<T extends string>(arg: T): T {
   return arg
 }
 

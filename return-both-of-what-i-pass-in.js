@@ -3,7 +3,7 @@
  * @param {T} a
  * @param {U} b
  */
-function returnBothOfWhatIPassIn(a, b) {
+export function returnBothOfWhatIPassIn(a, b) {
   return {
     a,
     b,
