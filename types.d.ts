@@ -6,3 +6,7 @@ export interface Params<T, U> {
   a: T
   b: U
 }
+export interface User {
+  firstName: string
+  lastName: string
+}
