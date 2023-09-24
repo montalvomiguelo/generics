@@ -10,3 +10,5 @@ export interface User {
   firstName: string
   lastName: string
 }
+type CreateSet<T = string> = Set<T>
+type Result = CreateSet
