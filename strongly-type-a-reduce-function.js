@@ -7,7 +7,7 @@ const array = [
   },
 ]
 
-/** type {Record<string, { name: string }>} */
+/** @type {Record<string, { name: string }>} */
 const acc = {}
 const obj = array.reduce((accum, item) => {
   accum[item.name] = item

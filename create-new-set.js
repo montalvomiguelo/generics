@@ -10,5 +10,5 @@ export const createSet = () => {
 const stringSet = createSet()
 /** @type {Set<number>} */
 const numberSet = createSet()
-/** @type {Set<unkown>} */
+/** @type {Set<unknown>} */
 const unknownSet = createSet()
