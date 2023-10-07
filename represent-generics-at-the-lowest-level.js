@@ -1,5 +1,7 @@
+import { expectType } from 'ts-expect'
+
 /**
- * @template {{showBanner: boolean, showLogOut: boolean}} T
+ * @template T
  * @param {{rawConfig: { featureFlags: { homePage: T } }}} config
  * @param {(flags: T) => T} override
  */
@@ -25,7 +27,21 @@ const EXAMPLE_CONFIG = {
   },
 }
 
-const flags = getHomePageFeatureFlags(
-  EXAMPLE_CONFIG,
-  (defaultFlags) => defaultFlags
+/**
+ * @template {{showBanner: boolean, showLogOut: boolean}} T
+ * @param {T} flags
+ */
+expectType(
+  getHomePageFeatureFlags(EXAMPLE_CONFIG, (defaultFlags) => defaultFlags)
+)
+
+/**
+ * @template {{showBanner: boolean, showLogOut: boolean}} T
+ * @param {T} flags
+ */
+expectType(
+  getHomePageFeatureFlags(EXAMPLE_CONFIG, (defaultFlags) => ({
+    ...defaultFlags,
+    showLogOut: false,
+  }))
 )
