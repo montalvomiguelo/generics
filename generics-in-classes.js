@@ -1,3 +1,5 @@
+import { expectType } from 'ts-expect'
+
 /**
  * @template T
  */
@@ -14,3 +16,5 @@ export class Component {
 
 const component = new Component({ name: 'John' })
 const props = component.props
+
+expectType(props)

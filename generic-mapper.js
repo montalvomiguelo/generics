@@ -1,3 +1,5 @@
+import { expectType } from 'ts-expect'
+
 /**
  * @template {import('./types').User} T
  * @param {T} user
@@ -17,3 +19,5 @@ const users = [
 ]
 
 const newUsers = users.map(concatenateFirstNameAndLastName)
+
+expectType(newUsers)

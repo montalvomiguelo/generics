@@ -27,18 +27,10 @@ const EXAMPLE_CONFIG = {
   },
 }
 
-/**
- * @template {{showBanner: boolean, showLogOut: boolean}} T
- * @param {T} flags
- */
 expectType(
   getHomePageFeatureFlags(EXAMPLE_CONFIG, (defaultFlags) => defaultFlags)
 )
 
-/**
- * @template {{showBanner: boolean, showLogOut: boolean}} T
- * @param {T} flags
- */
 expectType(
   getHomePageFeatureFlags(EXAMPLE_CONFIG, (defaultFlags) => ({
     ...defaultFlags,

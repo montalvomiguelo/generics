@@ -1,3 +1,5 @@
+import { expectType } from 'ts-expect'
+
 /**
  * @template T
  * @return {Set<T>}
@@ -12,3 +14,7 @@ const stringSet = createSet()
 const numberSet = createSet()
 /** @type {Set<unknown>} */
 const unknownSet = createSet()
+
+expectType(stringSet)
+expectType(numberSet)
+expectType(unknownSet)

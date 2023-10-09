@@ -1,4 +1,6 @@
-export class Component<T> {
+import { expectType } from 'ts-expect'
+
+class Component<T> {
   props: T
 
   constructor(props: T) {
@@ -12,3 +14,5 @@ export class Component<T> {
 
 const component = new Component({ name: 'John' })
 const props = component.getProps()
+
+expectType<{ name: string }>(props)

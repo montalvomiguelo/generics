@@ -1,3 +1,5 @@
+import { expectType } from 'ts-expect'
+
 /**
  * @template T
  */
@@ -33,3 +35,5 @@ const component = new Component({ a: 1, b: 2, c: 3 })
 const clonedComponent = cloneComponent(component)
 
 const result = clonedComponent.getProps()
+
+expectType(result)

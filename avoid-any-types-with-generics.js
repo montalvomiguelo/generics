@@ -1,3 +1,5 @@
+import { expectType } from 'ts-expect'
+
 /**
  * @template T
  * @param {string} url
@@ -13,4 +15,4 @@ async function fetchData(url) {
  */
 const data = await fetchData('https://jsonplaceholder.typicode.com/users/1')
 
-export { data }
+expectType(data)

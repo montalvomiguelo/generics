@@ -1,3 +1,5 @@
+import { expectType } from 'ts-expect'
+
 const array = [
   {
     name: 'John',
@@ -13,3 +15,5 @@ const obj = array.reduce((accum, item) => {
   accum[item.name] = item
   return accum
 }, acc)
+
+expectType(obj)

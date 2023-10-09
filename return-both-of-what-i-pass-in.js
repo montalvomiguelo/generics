@@ -1,5 +1,5 @@
 /**
- * @template {string} T, U
+ * @template {string} T,U
  * @param {T} a
  * @param {U} b
  */

@@ -1,5 +1,7 @@
+import { expectType } from 'ts-expect'
+
 /**
- * @template T, U
+ * @template T,U
  * @param {import('./types').Params<T, U>} params
  */
 function returnBothOfWhatIPassIn(params) {
@@ -7,3 +9,5 @@ function returnBothOfWhatIPassIn(params) {
 }
 
 const result = returnBothOfWhatIPassIn({ a: 'a', b: 1 })
+
+expectType(result)

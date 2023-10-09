@@ -1,7 +1,11 @@
-export function returnWhatIPassIn<T extends string>(arg: T): T {
+import { expectType } from 'ts-expect'
+
+export function returnWhatIPassIn<T>(arg: T): T {
   return arg
 }
 
-// @ts-expect-error - this should fail
 const one = returnWhatIPassIn(1)
 const matt = returnWhatIPassIn('matt')
+
+expectType<1>(one)
+expectType<'matt'>(matt)
