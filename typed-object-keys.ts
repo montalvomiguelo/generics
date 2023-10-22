@@ -1,6 +1,6 @@
 import { expectType } from 'ts-expect'
 
-const typedObjectKeys = <T extends string>(obj: Record<T, number>) => {
+const typedObjectKeys = <T extends string>(obj: Record<T, any>) => {
   return Object.keys(obj) as Array<T>
 }
 
