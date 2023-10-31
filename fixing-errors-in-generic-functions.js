@@ -1,10 +1,12 @@
 import { expectType } from 'ts-expect'
 
+/** @typedef {import('./types').Person} Person */
+
 /**
- * @template {keyof import('./types').Person} T
+ * @template {keyof Person} T
  * @param {T} key
- * @param {import('./types').Person[T]} value
- * @returns {import('./types').Person[T]}
+ * @param {Person[T]} value
+ * @returns {Person[T]}
  */
 export function remapPerson(key, value) {
   if (key === 'birthdate') {
