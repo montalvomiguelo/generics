@@ -25,3 +25,9 @@ export type Person = {
   age: number
   birthdate: Date
 }
+
+export interface Cache<T> {
+  get: (key: string) => T | undefined
+  set: (key: string, value: T) => void
+  clone: <U>(transform: (elem: T) => U) => Cache<U>
+}
